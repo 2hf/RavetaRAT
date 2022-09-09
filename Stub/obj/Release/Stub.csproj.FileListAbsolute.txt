@@ -1,0 +1,11 @@
+D:\Projects\Raveta\Bin\Stub.exe.config
+D:\Projects\Raveta\Bin\Stub.exe
+D:\Projects\Raveta\Bin\Stub.pdb
+D:\Projects\Raveta\Stub\obj\Release\Stub.csproj.AssemblyReference.cache
+D:\Projects\Raveta\Stub\obj\Release\Stub.csproj.SuggestedBindingRedirects.cache
+D:\Projects\Raveta\Stub\obj\Release\Stub.csproj.CoreCompileInputs.cache
+D:\Projects\Raveta\Stub\obj\Release\Stub.exe
+D:\Projects\Raveta\Stub\obj\Release\Stub.pdb
+D:\Projects\Raveta\Bin\Release\net48\Stub.exe.config
+D:\Projects\Raveta\Bin\Release\net48\Stub.exe
+D:\Projects\Raveta\Bin\Release\net48\Stub.pdb
